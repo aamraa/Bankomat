@@ -13,6 +13,14 @@ public class Racun extends Izbornik {
 	public Racun(double trenutnoStanjeRacuna) {
 		
 	}
+	
+	public static int getbrojRacunaUkupno() {
+		return 0;
+	}
+
+	public int getBrojRacuna() {
+		return 0;
+	}
 
 	public void setBrojRacuna(int brojRacuna) {
 		this.brojRacuna = brojRacuna;
@@ -41,6 +49,8 @@ public class Racun extends Izbornik {
 				return;
 
 	}
+		System.out.println("Unijeti racun nije pronadjen.");
+		}
 
 	@Override
 	public String toString() {
