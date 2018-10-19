@@ -39,10 +39,15 @@ public class Racun extends Izbornik {
 	}
 
 	public void dodajNovac(double iznos) {
+		trenutnoStanjeRacuna += iznos;
 	
 	}
 
 	public static void ispisRacuna(int brojRacuna) {
+		for (int i = 0; i < racuni.size(); i++)
+			if (racuni.get(i).brojRacuna == brojRacuna) {
+				System.out.println(racuni.get(i).toString());
+				return;
 
 	}
 
