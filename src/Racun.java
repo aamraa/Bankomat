@@ -14,30 +14,21 @@ public class Racun extends Izbornik {
 		
 	}
 
-	public static int getbrojRacunaUkupno() {
-		return 0;
-	}
-
-	public int getBrojRacuna() {
-		return 0;
-	}
-
 	public void setBrojRacuna(int brojRacuna) {
-		
+		this.brojRacuna = brojRacuna;
 	}
 
 	public String getImeVlasnika() {
-		return 0;
+		return imeVlasnika;
 	}
 
 	public void setImeVlasnika(String imeVlasnika) {
-		
+		this.imeVlasnika = imeVlasnika;
 	}
 
 	public double getTrenutnoStanjeRacuna() {
-		return 0;
+		return trenutnoStanjeRacuna;
 	}
-
 	public void dodajNovac(double iznos) {
 		trenutnoStanjeRacuna += iznos;
 	
