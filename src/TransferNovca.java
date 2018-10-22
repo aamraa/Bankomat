@@ -1,4 +1,6 @@
 
+package Bankomat;
+
 
 public class TransferNovca extends Racun {
 
@@ -11,26 +13,30 @@ public class TransferNovca extends Racun {
 	}
 
 	public int getIzvorniRacun() {
-		return 0;
+		return izvorniRacun;
+		;
 	}
 
 	public void setIzvorniRacun(int izvorniRacun) {
-		
+		this.izvorniRacun = izvorniRacun;
+
 	}
 
 	public int getTargetRacun() {
-		return 0;
+		return targetRacun;
 	}
 
 	public void setTargetRacun(int targetRacun) {
-		
+		this.targetRacun = targetRacun;
 	}
 
 	public double getIznosZaPrebacivanje() {
-		return 0;
+		return iznosZaPrebacivanje;
+		;
 	}
 
 	public void setIznosZaPrebacivanje(double iznosZaPrebacivanje) {
+		this.iznosZaPrebacivanje = iznosZaPrebacivanje;
 		
 	}
 
