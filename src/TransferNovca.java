@@ -1,7 +1,6 @@
-package Bankomat;
-//Incijlaizirati metode od getIzvorniRacun do setIznosZaPrebacivanje
 
-//ukljucujuci i navedene dvije za TransferNovca klasu.
+package Bankomat;
+
 
 public class TransferNovca extends Racun {
 
@@ -42,10 +41,18 @@ public class TransferNovca extends Racun {
 	}
 
 	public boolean provjeriValidnost() {
-
+		return false;
 	}
 
 	public void izvrsiTransfer() {
+		for (int i = 0; i < racuni.size(); i++) {
+
+			if (racuni.get(i).getBrojRacuna() == izvorniRacun)
+				racuni.get(i).trenutnoStanjeRacuna -= iznosZaPrebacivanje;
+
+			if (racuni.get(i).getBrojRacuna() == targetRacun)
+				racuni.get(i).trenutnoStanjeRacuna += iznosZaPrebacivanje;
+		}
 
 	}
 
