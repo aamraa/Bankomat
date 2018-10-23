@@ -1,4 +1,4 @@
-package Bankomat;
+
 
 public class Racun extends Izbornik {
 	private int brojRacuna;
@@ -7,19 +7,19 @@ public class Racun extends Izbornik {
 	private static int brojRacunaUkupno;
 
 	public Racun() {
-		
+		brojRacunaUkupno++;
 	}
 
 	public Racun(double trenutnoStanjeRacuna) {
-		
+		this.trenutnoStanjeRacuna=trenutnoStanjeRacuna;
 	}
 	
 	public static int getbrojRacunaUkupno() {
-		return 0;
+		return brojRacunaUkupno;
 	}
 
 	public int getBrojRacuna() {
-		return 0;
+		return brojRacuna;
 	}
 
 	public void setBrojRacuna(int brojRacuna) {
