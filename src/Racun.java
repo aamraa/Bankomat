@@ -11,9 +11,9 @@ public class Racun extends Izbornik {
 	}
 
 	public Racun(double trenutnoStanjeRacuna) {
-		this.trenutnoStanjeRacuna=trenutnoStanjeRacuna;
+		this.trenutnoStanjeRacuna = trenutnoStanjeRacuna;
 	}
-	
+
 	public static int getbrojRacunaUkupno() {
 		return brojRacunaUkupno;
 	}
@@ -37,20 +37,21 @@ public class Racun extends Izbornik {
 	public double getTrenutnoStanjeRacuna() {
 		return trenutnoStanjeRacuna;
 	}
+
 	public void dodajNovac(double iznos) {
 		trenutnoStanjeRacuna += iznos;
-	
 	}
 
 	public static void ispisRacuna(int brojRacuna) {
+
 		for (int i = 0; i < racuni.size(); i++)
 			if (racuni.get(i).brojRacuna == brojRacuna) {
 				System.out.println(racuni.get(i).toString());
 				return;
+			}
 
-	}
 		System.out.println("Unijeti racun nije pronadjen.");
-		}
+	}
 
 	@Override
 	public String toString() {
