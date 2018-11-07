@@ -11,31 +11,62 @@ public class TransferNovca extends Racun {
 	}
 
 	public int getIzvorniRacun() {
-		return 0;
+		return izvorniRacun;
 	}
 
 	public void setIzvorniRacun(int izvorniRacun) {
-		
+		this.izvorniRacun = izvorniRacun;
 	}
 
 	public int getTargetRacun() {
-		return 0;
+		return targetRacun;
 	}
 
 	public void setTargetRacun(int targetRacun) {
-		
+		this.targetRacun = targetRacun;
 	}
 
 	public double getIznosZaPrebacivanje() {
-		return 0;
+		return iznosZaPrebacivanje;
 	}
 
 	public void setIznosZaPrebacivanje(double iznosZaPrebacivanje) {
-		
+		this.iznosZaPrebacivanje = iznosZaPrebacivanje;
 	}
 
 	public boolean provjeriValidnost() {
-		return false;
+		boolean izvorniPostoji = false;
+		boolean targetPostoji = false;
+		boolean dovoljnoNovca = false;
+
+		for (int i = 0; i < racuni.size(); i++) {
+
+			if (racuni.get(i).getBrojRacuna() == izvorniRacun) {
+
+				izvorniPostoji = true;
+
+				if ((racuni.get(i).trenutnoStanjeRacuna - iznosZaPrebacivanje) >= 0)
+					dovoljnoNovca = true;
+
+			}
+
+			if (racuni.get(i).getBrojRacuna() == targetRacun)
+				targetPostoji = true;
+
+		}
+
+		if (!izvorniPostoji)
+			System.out.println("Unijeti broj racuna za slanje ne postoji.");
+		if (!targetPostoji)
+			System.out.println("Unijeti broj racuna za primanje ne postoji.");
+		if (!dovoljnoNovca)
+			System.out.println("Nema dovoljno novca za transfer.");
+
+		if (!izvorniPostoji || !targetPostoji || !dovoljnoNovca)
+			return false;
+		else
+			return true;
+
 	}
 
 	public void izvrsiTransfer() {
@@ -51,3 +82,4 @@ public class TransferNovca extends Racun {
 	}
 
 }
+
