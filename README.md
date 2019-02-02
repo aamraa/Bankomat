@@ -1,5 +1,6 @@
 A simple Library application.
 
+
 The application offers the following services:
 
 • Creating an account
@@ -10,7 +11,9 @@ The application offers the following services:
 
 • Print details of existing accounts
 
+
 Create an account
+
 
 When you create an account, you are taking the following parameters:
 
@@ -27,7 +30,9 @@ Validation:
 
 • You must not allow the creation of a negative account number
 
+
 Creating a book
+
 
 When you create a book, you take the following parameters:
 
@@ -43,7 +48,9 @@ Validation:
 
 • You may not allow the creation of a book with a negative number
 
+
 Raising a book
+
 
 When you borrow a book, you are taking the following parameters:
 
@@ -53,6 +60,7 @@ When you borrow a book, you are taking the following parameters:
 
 When you issue a book, the application should increase the number of books issued for the given
 The account changes you book status. Reversed is valid when a user returns a book.
+
 
 Validation:
 
